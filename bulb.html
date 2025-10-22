@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔌Bulb ON-OFF</title>
+
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(252, 252, 202);
+            height: 100vh;
+        }
+        
+        .container{
+            background-color:white;
+            text-align: center;
+            padding: 10px 40px 40px;
+            border-radius: 80px;
+            box-shadow: 0 6px 8px rgb(110, 110, 2);
+            width: 300px;
+            border: 2px solid rgb(249, 249, 22);
+        }
+
+        img{
+            padding: 20px 0 10px;
+        }
+
+        button{
+            border-radius: 12px;
+            background-color: rgb(255, 255, 197);
+            padding: 6px;
+            margin:0 20px;
+            border: 2px solid rgb(255, 255, 6);
+            cursor: pointer;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        p{
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .clickon{
+            transition: 0.04s;
+        }
+
+        .clickon:hover{
+            background-color: rgb(255, 255, 115);
+        }
+
+        .clickoff{
+            transition: 0.04s;
+        }
+
+        .clickoff:hover{
+            background-color: rgb(122, 122, 119);
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="container">
+    <h1> BULB ON/OFF💡</h1>
+    <p> This is bulb mini project where we can ON and OFF this bulb using JS</p>
+
+    <img src="OFFbulb.jpg" alt="OFFbulb" title="Bulb" id="change">
+
+    <br>
+    <button onclick="on()" class="clickon"> ON💡</button>
+    <button onclick="off()" class="clickoff"> OFF💡</button>
+
+    </div>
+</body>
+
+
+<script>
+    function on(){
+        document.getElementById("change").src="ONbulb.jpg"
+    }
+
+
+    function off(){
+        document.getElementById("change").src="OFFbulb.jpg"
+    }
+</script>
+</html>
